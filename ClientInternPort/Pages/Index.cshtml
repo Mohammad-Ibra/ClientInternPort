@@ -1,0 +1,14 @@
+﻿@page
+@model IndexModel
+
+
+@foreach (var item in Model.Programs)
+            {
+    <div class="container p-3 m-3">
+                <b>IDS Strated "the @Html.DisplayFor(m => item.Title)"</b>
+                <p>@Html.DisplayFor(m => item.Description)</p>
+                <div class="col-3">
+                    <a class="btn btn-success btn-sm text-white" asp-page="Join-internship/JIndex" asp-route-id="@item.Id">Join Program</a>
+                </div>
+        </div>
+            }

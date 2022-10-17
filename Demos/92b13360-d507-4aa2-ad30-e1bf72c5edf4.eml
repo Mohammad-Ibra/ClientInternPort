@@ -1,0 +1,12 @@
+X-Sender: test@test.com
+X-Receiver: test@test.com
+MIME-Version: 1.0
+From: test@test.com
+To: test@test.com
+Date: 17 Oct 2022 16:40:23 +0300
+Subject: Thanks for Applying!
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+VGhhbmtzIGZvciBBcHBseWluZyB0byBvdXIgSW50ZXJuc2hpcCBwcm9ncmFtIHdlIHdp
+bGwgYmUgY29udGFjdGluZyB5b3UgYXMgc29vbiBhcyBwb3NzaWJsZSE=

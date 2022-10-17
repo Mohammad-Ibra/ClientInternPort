@@ -1,0 +1,99 @@
+﻿@page
+@model ClientInternPort.Pages.Join_internship.IndexModel
+
+<div class="container m-2 p-2">
+    <h4>@Model.Programs.Title</h4>
+</div>
+<br />
+<div class="container col-12">
+    <div class="row">
+        <div class="container m-2 p-2 col-4">
+            <p><b>Start Date: </b>@Model.Programs.StartDate</p>
+            <p><b>End Date: </b>@Model.Programs.EndDate</p>
+            <p><b>Capacity: </b>@Model.Programs.MaxCapacity</p>
+            <p><b>Current Registered: </b>@Model.Programs.CurrentCapacity</p>
+            <p><b>About Program: </b>@Model.Programs.Description</p>
+        </div>
+        <div class="container p-2 mt-2 col-7">
+            <form method="post">
+                <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                <input asp-for="Intern.ProgramId" value="Programs.Id" type="hidden" />
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="Intern.FullName"></label>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="Intern.FullName" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Intern.FullName" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="Intern.Email"></label>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="Intern.Email" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Intern.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="Intern.Major"></label>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="Intern.Major" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Intern.Major" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="Intern.University"></label>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="Intern.University" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Intern.University" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="Intern.PhoneNumber"></label>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="Intern.PhoneNumber" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Intern.PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="Intern.GraduationDate"></label>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="Intern.GraduationDate" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Intern.GraduationDate" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label>PDF File</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="file" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3 offset-2">
+                        <input type="submit" value="Submit" class="btn btn-primary form-control" />
+                        <asp:File>
+                    </div>
+                    <div class="col-3">
+                        <a asp-page="/Index" class="btn btn-success form-control">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
