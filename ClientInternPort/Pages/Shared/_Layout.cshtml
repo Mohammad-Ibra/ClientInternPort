@@ -6,25 +6,29 @@
     <title>@ViewData["Title"] - ClientInternPort</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">IDS - Online Internship Program</a>
+            <img src="~/images/icon.png" class="img-fluid" />
+            <div class="container d-block justify-content-start">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1 justify-content-end">
-                        <li class="nav-item border-right justify-content-center">
+                <div class="row ml-1">
+                    <a class="navbar-brand" asp-area="" asp-page="/Index" style="font-size:16px;">IDS - Online Internship Program</a>
+                </div>
+                <div class="row navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse ml-1">
+                    <ul class="navbar-nav flex-grow-1 justify-content-start">
+                        <li class="nav-item border justify-content-center pr-3 pl-3 pt-1 ">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
-                        <li class="nav-item border-left border-right justify-content-center">
+                        <li class="nav-item border justify-content-center pr-3 pl-3 pt-1 ">
                             <a class="nav-link text-dark" asp-area="" asp-page="/About-us/Index">About us</a>
                         </li>
-                        <li class="nav-item border-left justify-content-center">
+                        <li class="nav-item border justify-content-center pr-3 pl-3 pt-1">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Contact/Index">Contact us</a>
                         </li>
                     </ul>
