@@ -40,7 +40,7 @@ namespace ClientInternPort.Pages.Join_internship
             await _db.Interns.AddAsync(Intern);
             await _db.SaveChangesAsync();
             await SendEmail();
-            download(file);
+            Download(file);
             return RedirectToPage("/Index");
             
         }
@@ -64,7 +64,7 @@ namespace ClientInternPort.Pages.Join_internship
                 .SendAsync();
         }
 
-        private void download(IFormFile file)
+        private void Download(IFormFile file)
         {
             using(var fileStream = new FileStream($"C:/Users/Lenovo/Desktop/dotnet/ClientInternPort/{Intern.FullName}-CV.pdf", FileMode.Create, FileAccess.Write))
             {

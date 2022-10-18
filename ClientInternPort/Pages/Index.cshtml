@@ -4,18 +4,34 @@
 
 @foreach (var item in Model.Programs)
 {
-    <div class="container p-3 m-3">
-        <b>IDS Strated "the @Html.DisplayFor(m => item.Title)"</b>
-        <p>@Html.DisplayFor(m => item.Description)</p>
-        @if (item.CurrentCapacity < item.MaxCapacity)
-        {
-        <div class="col-3">
-            <a class="btn btn-success btn-sm text-white" asp-page="Join-internship/JIndex" asp-route-id="@item.Id">Join Program</a>
+    <div class="container border-bottom p-3 m-3 col-md-12 col-sm-12 col-lg-12">
+        <div class="row">
+            <div class="container col-lg-6 justify-content-center">
+                <b>IDS Strated "the @Html.DisplayFor(m => item.Title)"</b>
+                <br />
+                <p style="font-size:14px;">@Html.DisplayFor(m => item.Description)</p>
+                <!--THIS IS A PLACE HOLDER P TO BE DELETED!-->
+                <p style="font-size:14px;">
+                    Through this program, students will apply for a three-month internship within many selected topics in the field of development. Our first program topic is: “Web Programming”.
+
+                    Students must complete seven sessions of the topic through the IDS Learning Portal, and then submit their assignments online. At the end of the internship, interns will receive certificates based on the evaluation of their final project.
+
+                    Internships are available for both undergraduate and graduate students. 
+                </p>
+                @if (item.CurrentCapacity < item.MaxCapacity)
+                {
+                <div class="col-lg-5 offset-4">
+                    <a class="btn btn-success btn-sm text-white" asp-page="Join-internship/JIndex" asp-route-id="@item.Id">Join Program</a>
+                </div>
+                }
+                else
+                {
+                    <a class="btn btn-dark btn-sm text-white" asp-page="" >Join Program</a>
+                }
+            </div>
+            <div class="container col-lg-5">
+                <img src="~/images/sample.jpg" class="img-fluid"/>
+            </div>
         </div>
-        }
-        else
-        {
-            <a class="btn btn-dark btn-sm text-white" asp-page="" >Join Program</a>
-        }
      </div>
 }
